@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pokemonsimulation.view.SelectionScreenController">
+    <!-- Background Image -->
+    <ImageView fitHeight="768.0" fitWidth="1366.0">
+        <!-- Provide the path to your background image -->
+        <image>
+            <Image url="@../image/pokemonSelectionBackground.jpg" />
+        </image>
+    </ImageView>
+
+    <!-- Pokemon Image 1 -->
+    <VBox alignment="CENTER" layoutX="250.0" layoutY="284.0" spacing="40.0">
+        <ImageView fx:id="pokemonImage1" fitHeight="250.0" fitWidth="250.0">
+            <!-- Provide the path to your Pokemon image 1 -->
+            <image>
+                <Image url="@../image/bulbasaur.gif" />
+            </image>
+        </ImageView>
+        <HBox alignment="CENTER" spacing="40.0">
+            <!-- Select Button for Pokemon 1 -->
+            <Button id="selectButton" onAction="#selectBulbasaur" prefWidth="100.0" text="Select" />
+            <!-- Details Button for Pokemon 1 -->
+            <Button id="detailsButton" onAction="#detailsBulbasaur" prefWidth="100.0" text="Details" />
+        </HBox>
+    </VBox>
+
+    <!-- Pokemon Image 2 -->
+    <VBox alignment="CENTER" layoutX="558.0" layoutY="384.0" spacing="40.0">
+        <ImageView fx:id="pokemonImage2" fitHeight="250.0" fitWidth="250.0">
+            <!-- Provide the path to your Pokemon image 2 -->
+            <image>
+                <Image url="@../image/charmander.gif" />
+            </image>
+        </ImageView>
+        <HBox alignment="CENTER" spacing="40.0">
+            <!-- Select Button for Pokemon 2 -->
+            <Button id="selectButton" onAction="#selectCharmander" prefWidth="100.0" text="Select" />
+            <!-- Details Button for Pokemon 2 -->
+            <Button id="detailsButton" onAction="#detailsCharmander" prefWidth="100.0" text="Details" />
+        </HBox>
+    </VBox>
+
+    <!-- Pokemon Image 3 -->
+    <VBox alignment="CENTER" layoutX="872.0" layoutY="284.0" spacing="40.0">
+        <ImageView fx:id="pokemonImage3" fitHeight="250.0" fitWidth="250.0">
+            <!-- Provide the path to your Pokemon image 3 -->
+            <image>
+                <Image url="@../image/squirtle.gif" />
+            </image>
+        </ImageView>
+        <HBox alignment="CENTER" spacing="40.0">
+            <!-- Select Button for Pokemon 3 -->
+            <Button id="selectButton" onAction="#selectSquirtle" prefWidth="100.0" text="Select" />
+            <!-- Details Button for Pokemon 3 -->
+            <Button id="detailsButton" onAction="#detailsSquirtle" prefWidth="100.0" text="Details" />
+        </HBox>
+    </VBox>
+   <Button id="getBackButton" layoutX="38.0" layoutY="41.0" mnemonicParsing="false" onAction="#getBack" prefHeight="50.0" prefWidth="200.0" text="Get Back" />
+</AnchorPane>

@@ -1,0 +1,222 @@
+/* styles.css */
+
+/* Style for the Start Game button in SplashScreen.fxml */
+#startGameButton {
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #45a049); /* Green gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 200; /* Set preferred width to 200 pixels */
+    -fx-pref-height: 65; /* Set preferred height to 65 pixels */
+    -fx-padding: 10 20; /* Add padding (top and bottom: 10px, left and right: 20px) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+#startGameButton:hover {
+    -fx-background-color: linear-gradient(#45a049, #408140); /* Darker green gradient color when hovered */
+    -fx-font-size: 30px; /* Increase font size when hovered */
+}
+
+/* Style for the Splash Text in SplashScreen.fxml */
+#splashText {
+    -fx-font-size: 90px; /* Decrease font size to fit better */
+    -fx-fill: #003366; /* Set text color to a dark blue */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+    -fx-padding: 0 5px; /* Add space (padding) around each word */
+    -fx-border-color: black; /* Add a dark border around each word */
+    -fx-border-width: 1px; /* Set border width */
+    -fx-border-style: solid; /* Set border style to solid */
+}
+
+/* Style for the Get Back button in UserManual.fxml */
+#getBackButton {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #ff3300, #cc0000); /* Red gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 200; /* Set preferred width to 200 pixels */
+    -fx-pref-height: 50; /* Set preferred height to 50 pixels */
+    -fx-padding: 10 20; /* Add padding (top and bottom: 10px, left and right: 20px) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+#getBackButton:hover {
+    -fx-background-color: linear-gradient(#cc0000, #990000); /* Darker red gradient color when hovered */
+    -fx-font-size: 24px; /* Increase font size when hovered */
+}
+
+/* Style for the Yes, I understand button in UserManual.fxml */
+#yesButton {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #0099cc, #0086b3); /* Blue gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 250; /* Set preferred width to 200 pixels */
+    -fx-pref-height: 50; /* Set preferred height to 50 pixels */
+    -fx-padding: 10 20; /* Add padding (top and bottom: 10px, left and right: 20px) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+#yesButton:hover {
+    -fx-background-color: linear-gradient(#0086b3, #007399); /* Darker blue gradient color when hovered */
+    -fx-font-size: 24px; /* Increase font size when hovered */
+}
+
+/* Style for the Select Button for each Pokemon in SelectionScreen.fxml */
+#selectButton {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #f9a825, #f57f17); /* Orange gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 100; /* Set preferred width to 100 pixels */
+    -fx-pref-height: 40; /* Set preferred height to 40 pixels */
+    -fx-padding: 8 16; /* Add padding (top and bottom: 8px, left and right: 16px) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+#selectButton:hover {
+    -fx-font-size: 22px; /* Increase font size when hovered */
+}
+
+/* Style for the Details Button for each Pokemon in SelectionScreen.fxml */
+#detailsButton {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #0099cc, #0086b3); /* Blue gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 100; /* Set preferred width to 100 pixels */
+    -fx-pref-height: 35; /* Set preferred height to 35 pixels */
+    -fx-padding: 8 16; /* Add padding (top and bottom: 8px, left and right: 16px) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+#detailsButton:hover {
+    -fx-background-color: linear-gradient(#0086b3, #007399); /* Darker blue gradient color when hovered */
+    -fx-font-size: 20px; /* Increase font size when hovered */
+}
+
+.root {
+    -fx-background-size: cover;
+}
+
+/* Pokemon Level Label */
+#pokemonLevelLabel {
+    -fx-background-color: #00CC00;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-border-radius: 20px;
+    -fx-alignment: center;
+}
+
+/* Pokemon Image */
+.pokemon-image {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1);
+}
+
+/* Stats (Happiness, Drowsiness, Satiety) */
+.stat-box {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0.0, 0, 1);
+}
+
+.stat-box > * {
+    -fx-padding: 5px 0;
+}
+
+/* Progress Bar */
+.progress-bar {
+    -fx-accent: #0099cc;
+}
+
+/* Circular Buttons */
+.circular-button {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #f9a825, #f57f17); /* Orange gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 100px;
+    -fx-pref-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+.circular-button:hover {
+    -fx-background-color: linear-gradient(#f57f17, #f9a825); /* Lighter orange gradient color when hovered */
+    -fx-font-size: 20px; /* Increase font size when hovered */
+}
+
+.reset-button {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#cc0000, #990000); /* Orange gradient background */
+    -fx-background-radius: 30; /* Rounded corners */
+    -fx-pref-width: 100px;
+    -fx-pref-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 5, 0.0, 0, 1); /* Add a drop shadow effect */
+}
+
+.reset-button:hover {
+    -fx-background-color: linear-gradient(#cc0000, #990000); /* Lighter orange gradient color when hovered */
+    -fx-font-size: 20px; /* Increase font size when hovered */
+}
+
+.bar-red {
+    -fx-accent: #FF0000; /* Red color */
+}
+
+.bar-orange {
+    -fx-accent: #f57f17; /* Orange color */
+}
+
+.bar-yellow {
+    -fx-accent: #f9a825; /* Yellow color */
+}
+
+#pokemonInfo {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+#pokemonAbilities {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+#pokemonName, #pokemonEA, #pokemonAbilitiesLabel {
+    -fx-font-size: 22px;
+    -fx-text-fill: #008000; /* Blue color */
+    -fx-font-weight: bold;
+}
+
+#pokemonAbilities1, #pokemonAbilities2, #pokemonAbilities3 {
+    -fx-font-size: 18px;
+    -fx-text-fill: #964B00; /* Green color */
+    -fx-font-weight: bold;
+}
+
+.ability-button {
+    -fx-background-color: linear-gradient(to bottom, #4e6ef5, #4263f5);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 8 16;
+}
+
+.escape-button {
+    -fx-background-color: linear-gradient(to bottom, #f55f5f, #f54242);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 8 16;
+}

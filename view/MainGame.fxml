@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Background Image -->
+    <!-- Add ImageView for background image here (you can remove the existing ImageView) -->
+    <ImageView fitHeight="768.0" fitWidth="1366.0">
+        <!-- Provide the path to your background image -->
+        <image>
+            <Image url="@../image/mainGame1.gif" />
+        </image>
+    </ImageView>
+
+    <!-- Pokemon Level and Experience Bar -->
+    <VBox alignment="CENTER" spacing="10" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <HBox alignment="CENTER" spacing="10">
+            <Label fx:id="pokemonLevelLabel" styleClass="level-label" text="1" />
+            <ProgressBar fx:id="experienceBar" prefWidth="200.0" styleClass="progress-bar" />
+        </HBox>
+        <StackPane alignment="CENTER">
+            <ImageView fx:id="pokemonImage" fitHeight="400" fitWidth="400" preserveRatio="true" styleClass="pokemon-image">
+            <StackPane.margin>
+               <Insets top="70.0" />
+            </StackPane.margin></ImageView>
+        </StackPane>
+    </VBox>
+
+    <!-- Stats (Happiness, Drowsiness, Satiety) -->
+    <VBox layoutX="50.0" layoutY="50.0" spacing="20" styleClass="stat-box">
+        <!-- Happiness -->
+        <Label text="Happiness" />
+        <ProgressBar fx:id="happinessBar" prefWidth="100" styleClass="progress-bar" />
+        <Label fx:id="happinessLabel" />
+
+        <!-- Drowsiness -->
+        <Label text="Drowsiness" />
+        <ProgressBar fx:id="drowsinessBar" prefWidth="100" styleClass="progress-bar" />
+        <Label fx:id="drowsinessLabel" />
+
+        <!-- Satiety -->
+        <Label text="Satiety" />
+        <ProgressBar fx:id="satietyBar" prefWidth="100" styleClass="progress-bar" />
+        <Label fx:id="satietyLabel" />
+    </VBox>
+
+    <!-- Circular Buttons -->
+    <VBox layoutX="1200.0" layoutY="100.0" spacing="10">
+        <Button fx:id="feedButton" onAction="#feedPokemon" styleClass="circular-button" text="Feed" />
+        <Button fx:id="restButton" onAction="#restPokemon" styleClass="circular-button" text="Rest" />
+        <Button fx:id="playButton" onAction="#playPokemon" styleClass="circular-button" text="Play" />
+    </VBox>
+
+    <!-- Fight Button -->
+    <Button fx:id="fightButton" layoutX="1200.0" layoutY="700.0" onAction="#fightPokemon" styleClass="circular-button" text="Fight" />
+    <Button fx:id="resetButton" layoutX="100.0" layoutY="700.0" onAction="#getBack" styleClass="reset-button" text="Go Back" />
+
+</AnchorPane>

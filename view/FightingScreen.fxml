@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/fightingScreenBackground.jpg" />
+         </image>
+      </ImageView>
+        <FlowPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane prefHeight="768.0" prefWidth="1366.0">
+                    <children>
+                        <HBox prefHeight="768.0" prefWidth="1366.0">
+                            <children>
+                                <Pane prefHeight="768.0" prefWidth="683.0">
+                                    <children>
+                                        <AnchorPane id="Player1" prefHeight="768.0" prefWidth="683.0">
+                                            <children>
+                                                <ImageView fx:id="pokemonChosenImage" fitHeight="310.0" fitWidth="200.0" layoutX="242.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+                                                <ToolBar layoutX="150.0" layoutY="55.0" prefHeight="55.0" prefWidth="383.0" style="-fx-background-radius: 20;">
+                                                    <items>
+                                                        <ProgressBar fx:id="pokemonChosenHealth" prefHeight="23.0" prefWidth="270.0" progress="1.0" />
+                                                        <Label fx:id="pokemonChosenHealthText" prefHeight="41.0" prefWidth="90.0" text="100.0/100.0" textAlignment="JUSTIFY">
+                                                            <padding>
+                                                                <Insets bottom="10.0" right="10.0" top="10.0" />
+                                                            </padding>
+                                                        </Label>
+                                                    </items>
+                                                </ToolBar>
+                                                <Label fx:id="pokemonChosenName" layoutX="150.0" layoutY="126.0" text="Pokemon 1" textFill="WHITE">
+                                                    <padding>
+                                                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                                                    </padding>
+                                                    <font>
+                                                        <Font name="Arial Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </Pane>
+                                <Pane prefWidth="683.0">
+                                    <children>
+                                        <AnchorPane id="Player2" prefHeight="768.0" prefWidth="683.0">
+                                            <children>
+                                                <ImageView fx:id="pokemonChosenOpponentImage" fitHeight="310.0" fitWidth="200.0" layoutX="242.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+                                                <ToolBar layoutX="147.0" layoutY="55.0" prefHeight="50.0" prefWidth="383.0" style="-fx-background-radius: 20;">
+                                                    <items>
+                                                        <ProgressBar fx:id="pokemonChosenOpponentHealth" prefWidth="270.0" progress="1.0" />
+                                                        <Label fx:id="pokemonChosenOpponentHealthText" prefHeight="41.0" prefWidth="90.0" text="100.0/100.0">
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                            </padding>
+                                                        </Label>
+                                                    </items>
+                                                </ToolBar>
+                                    <Label fx:id="pokemonChosenOpponentName" layoutX="413.0" layoutY="126.0" text="Pokemon 2" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Arial Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </FlowPane>
+        <HBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+            <Button fx:id="ability1" onAction="#ability1" styleClass="ability-button" text="Ability 1" />
+            <Button fx:id="ability2" onAction="#ability2" styleClass="ability-button" text="Ability 2" />
+            <Button fx:id="ability3" onAction="#ability3" styleClass="ability-button" text="Ability 3" />
+            <Button fx:id="escapeButton" onAction="#escape" styleClass="escape-button" text="Escape" />
+        </HBox>
+    </children>
+</AnchorPane>
